@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traversing Methods</title>
+
+
+</head>
+<body>
+<h1>Traversing Methods in Jquery</h1>
+<section>
+  <div>
+    <h3>Hello</h3>
+  </div>
+
+  <ul>
+    <li>Hello</li>
+    <li>Hello</li>
+    <li>Changeg color to red</li>
+  </ul>
+</section>
+
+<ul>
+  <li>children()</li>
+  <li>children(':nth-child(1)')</li>
+  <li>children(':eq(1)')</li>
+  <li>find()</li>
+  <li>get()</li>
+  <li>parent()</li>
+  <li>parents()</li>
+  <li>eq()</li>
+</ul>
+
+
+<script src="bootstrap/js/jquery-3.7.1.min.js"></script>
+<script>
+  //will return all the root children of the body
+  $('body').children(); //collection
+
+  //so if you want you can select one like this from the children
+  // body>section
+  $('body').children('section');
+
+  //we can traverse more if we wanted to
+  // body>section>ul
+  $('body').children('section').children('ul');
+
+
+  $('body').children('section').children('ul').children('li:nth-child(3)').css("color",'red');
+  $('body').children('section').children('ul').children('li:nth-child(3)').css("font-size",'50px');
+
+</script>
+</body>
+</html>
